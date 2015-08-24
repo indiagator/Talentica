@@ -33,7 +33,7 @@ public class Shop
     private final Set<Product> productSet;
     
     /**
-     * List of Product Offers
+     * List of Product Offers with Price
      */
     private final List<ProductOffer> productOffers;
 
@@ -61,11 +61,18 @@ public class Shop
         return productOffers;
     }
     
+    /**
+     * this method adds a new Product Offer to this Shop
+     * @param productOffer 
+     */
     public void addProductOffer(ProductOffer productOffer)
     {
         this.productOffers.add(productOffer);
     }
     
+    /**
+     * Routine to populate the Product Set for this shop from all the Product Offers
+     */
     public void populateProductSet()
     {
         productOffers.stream().forEach((p)->productSet.addAll(p.getProducts()));

@@ -16,7 +16,7 @@ import java.util.Set;
 public class ProductOffer 
 {
     /**
-     * list of all products in this offer
+     * set of all products in this offer
      * number of products maybe more than one
      */
     private Set<Product> products;
@@ -42,7 +42,11 @@ public class ProductOffer
     }
     
    
-    
+    /**
+     * This method returns the Type of this Product Offer
+     * type can be -- Single, Combo or Empty
+     * @return 
+     */
     public String getType()
     {
         
@@ -82,16 +86,6 @@ public class ProductOffer
         this.shopId = po.getShopId();
     }
 
-    
-    
-    public void removeProduct(String productName)
-    {
-        /**
-         * this method takes the productName and retrieves the product
-         * reference and then removes it from the set
-         */
-        
-    }
     
     @Override
     public String toString()

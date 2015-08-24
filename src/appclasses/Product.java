@@ -18,7 +18,7 @@ public class Product
     private final String label;
     
     /**
-     * catalogue id of the product
+     * id of the product - auto generated in this App
      */
     private final int productId;
 
